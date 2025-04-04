@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+		/>
+
+		<link rel="icon" type="image/svg+xml" href="/desafio-avanti/desenvolvimento-do-layout/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desenvolvimento de layout</title>
+		<script type="module" crossorigin src="/desafio-avanti/desenvolvimento-do-layout/assets/index-DEK0_6c_.js"></script>
+		<link rel="stylesheet" crossorigin href="/desafio-avanti/desenvolvimento-do-layout/assets/index-CR59NLi3.css">
+	</head>
+	<body>
+		<div id="app">
+			<section
+				class="min-h-[3.25rem] flex items-center justify-center bg-[#005CFF] text-center sm:min-h-[1.875rem]"
+			>
+				<h2 class="text-white text-[0.875rem] font-bold px-5">
+					Ganhe
+					<strong class="bg-[#6220C1] rounded-[4px] px-[4px]">
+						R$10,00</strong
+					>
+					de desconte no seu primeiro pedido. Utilize o cupom
+					DESCONTO10
+				</h2>
+			</section>
+
+			<header class="w-full z-10 shadow-lg relative">
+				<div class="header-container max-w-[1280px] w-full">
+					<a class="logo">
+						<img
+							class=""
+							src="/desafio-avanti/desenvolvimento-do-layout/assets/avanti-logo-CCIII-j3.svg"
+							alt="Logo da Avanti"
+						/>
+					</a>
+					<form
+						class="search flex justify-center items-center rounded-[10px] max-h-[38px]"
+					>
+						<input
+							name="input"
+							class="flex items-center h-[2.5rem] px-4 border-none outline-none w-full"
+							type="text"
+							placeholder="Digite aqui o você procura"
+						/>
+						<i class="text-2xl px-3 ph ph-magnifying-glass"></i>
+					</form>
+					<div
+						class="cart flex items-center justify-center max-h-[28px] gap-2"
+					>
+						<img
+							src="data:image/svg+xml,%3csvg%20width='21'%20height='24'%20viewBox='0%200%2021%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14.5713%2013.7138H6C4.4087%2013.7138%202.88258%2014.346%201.75736%2015.4712C0.632145%2016.5964%200%2018.1225%200%2019.7138V21.4276C-6.13331e-08%2022.1097%200.27087%2022.7638%200.753046%2023.2462C1.23522%2023.7286%201.88922%2023.9997%202.57127%2024H18C18.6819%2024%2019.336%2023.7291%2019.8182%2023.2469C20.3004%2022.7647%2020.5713%2022.1107%2020.5713%2021.4287V19.7138C20.5713%2018.1225%2019.9391%2016.5964%2018.8139%2015.4712C17.6887%2014.346%2016.1626%2013.7138%2014.5713%2013.7138ZM6%2015.4287H14.5713C15.708%2015.4287%2016.7982%2015.8803%2017.6021%2016.6841C18.4059%2017.4879%2018.8574%2018.5781%2018.8574%2019.7149V21.4287C18.8576%2021.5414%2018.8355%2021.6529%2018.7925%2021.757C18.7494%2021.8611%2018.6863%2021.9557%2018.6066%2022.0354C18.527%2022.115%2018.4324%2022.1782%2018.3283%2022.2212C18.2242%2022.2642%2018.1126%2022.2863%2018%2022.2862H2.57127C2.34386%2022.2862%202.12576%2022.1958%201.96495%2022.035C1.80415%2021.8742%201.71382%2021.6561%201.71382%2021.4287V19.7138C1.71411%2018.5772%202.16582%2017.4873%202.9696%2016.6837C3.77339%2015.8802%204.86342%2015.4287%206%2015.4287ZM10.2862%200C9.09949%200%207.93946%200.351895%206.95276%201.01118C5.96607%201.67047%205.19702%202.60754%204.7429%203.7039C4.28877%204.80026%204.16996%206.00666%204.40147%207.17054C4.63298%208.33443%205.20443%209.40353%206.04355%2010.2426C6.88266%2011.0818%207.95175%2011.6532%209.11564%2011.8847C10.2795%2012.1162%2011.4859%2011.9974%2012.5823%2011.5433C13.6786%2011.0892%2014.6157%2010.3201%2015.275%209.33342C15.9343%208.34673%2016.2862%207.18669%2016.2862%206C16.2862%204.4087%2015.654%202.88258%2014.5288%201.75736C13.4036%200.632141%2011.8775%200%2010.2862%200ZM10.2862%201.71382C11.1339%201.71382%2011.9626%201.9652%2012.6675%202.43617C13.3723%202.90714%2013.9217%203.57655%2014.2461%204.35975C14.5705%205.14295%2014.6554%206.00476%2014.49%206.83619C14.3246%207.66763%2013.9164%208.43135%2013.317%209.03079C12.7175%209.63022%2011.9538%2010.0384%2011.1224%2010.2038C10.2909%2010.3692%209.42912%2010.2843%208.64592%209.95991C7.86273%209.6355%207.19332%209.08613%206.72235%208.38127C6.25138%207.67642%206%206.84773%206%206C6.00029%204.86332%206.45197%203.77328%207.25572%202.96953C8.05947%202.16578%209.1495%201.71411%2010.2862%201.71382Z'%20fill='%23005CFF'/%3e%3c/svg%3e"
+							class="cursor-pointer hidden md:block"
+							alt=""
+						/>
+						<div class="font-semibold hidden md:block">
+							<p
+								class="text-[14px] text-w font-semibold leading-3"
+							>
+								Olá, <br />Nome Cliente!
+							</p>
+						</div>
+						<i
+							class="text-[1.563rem] md:text-2xl cursor-pointer font-bold ph ph-shopping-cart-simple text-black"
+						></i>
+					</div>
+					<nav
+						class="nav relative flex items-center justify-center max-h-[22px] text-[14px]"
+						id="department-row"
+					>
+						<button
+							class="menu-toggle cursor-pointer text-xl font-semibold flex items-center m-0 max-h-[22px] gap-0.5"
+						>
+							<i
+								class="ph ph-list text-[1.563rem] md:text-2xl"
+							></i>
+							<p class="hidden md:block text-[14px] font-bold">
+								Todas as Categorias
+							</p>
+						</button>
+					</nav>
+				</div>
+			</header>
+
+			<nav class="menu-container hidden" id="menu-content">
+				<div class="menu-column shadow p-4 overflow-auto bg-[#F5F5F5]">
+					<div
+						id="department-column"
+						class="flex flex-col gap-4"
+					></div>
+				</div>
+				<div
+					class="menu-row flex flex-wrap shadow overflow-auto bg-[#fff] xl:bg-wite"
+				>
+					<div
+						id="category-column"
+						class="flex flex-col gap-4 flex-wrap h-[329px] xl:min-w-[600px] pt-4 pl-4"
+					></div>
+					<div class="menu-img">
+						<h3 class="">
+							Confira os Produtos Que acabaram De chegar
+						</h3>
+						<button
+							class="bottom-3 left-3 text-white p-4 font-bold"
+						>
+							VER TODOS
+						</button>
+						<img
+							class="absolute"
+							src="data:image/svg+xml,%3csvg%20width='236'%20height='298'%20viewBox='0%200%20236%20298'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M236%20288C236%20293.523%20231.523%20298%20226%20298H10C4.47716%20298%200%20293.523%200%20288V10C0%204.47714%204.47716%200%2010%200H226C231.523%200%20236%204.47714%20236%2010V288Z'%20fill='url(%23paint0_linear_22_417)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_22_417'%20x1='284.272'%20y1='114.606'%20x2='-90.4142'%20y2='114.606'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-opacity='0.74902'/%3e%3cstop%20offset='1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"
+							alt=""
+						/>
+					</div>
+				</div>
+			</nav>
+
+			<nav class="menu-container hidden" id="menu-content-row">
+				<div class="flex items-center shadow pl-4 bg-[#fff] h-[329px]">
+					<div class="flex-col min-h-[100%]">
+						<h2
+							class="dep-tile text-[16px] my-5 font-bold text-black"
+							id="dep-title"
+						></h2>
+						<div
+							class="flex flex-col flex-wrap gap-4 overflow-auto h-[270px] space-x-8"
+							id="category-row"
+						></div>
+					</div>
+					<div class="menu-img">
+						<h3 class="">
+							Confira os Produtos Que acabaram De chegar
+						</h3>
+						<button
+							class="bottom-3 left-3 text-white p-4 font-bold"
+						>
+							VER TODOS
+						</button>
+						<img
+							class="absolute"
+							src="data:image/svg+xml,%3csvg%20width='236'%20height='298'%20viewBox='0%200%20236%20298'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M236%20288C236%20293.523%20231.523%20298%20226%20298H10C4.47716%20298%200%20293.523%200%20288V10C0%204.47714%204.47716%200%2010%200H226C231.523%200%20236%204.47714%20236%2010V288Z'%20fill='url(%23paint0_linear_22_417)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_22_417'%20x1='284.272'%20y1='114.606'%20x2='-90.4142'%20y2='114.606'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-opacity='0.74902'/%3e%3cstop%20offset='1'%20stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"
+							alt=""
+						/>
+					</div>
+				</div>
+			</nav>
+
+			<article class="bg-[#E7E7EA] max-h-[510px]">
+				<div class="banner max-w-[1280px] mx-auto">
+					<img class="" src="/desafio-avanti/desenvolvimento-do-layout/assets/banner_1-Cn_Wp3Hn.svg" alt="" />
+
+					<div class="banner-title">
+						<h2 class="strong font-bold">
+							<strong>SUPER</strong>
+							<p class="font-light">SALE</p>
+						</h2>
+						<p class="promotion text-[#005CFF] font-bold">
+							ITENS SELECIONADOS COM ATÉ
+						</p>
+						<p class="number text-[#005CFF] font-bold">50% OFF</p>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<section class="px-4">
+			<div
+				class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+			>
+				<div class="w-full flex justify-between mb-3">
+					<p class="text-xl font-bold">Lançamentos</p>
+					<p class="text-sm">Ver mais</p>
+				</div>
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides" id="ul-shirt-1"></ul>
+				</div>
+				<div
+					class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+					data-glide-el="controls"
+				>
+					<button
+						class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+						data-glide-dir="<"
+					>
+						<img src="data:image/svg+xml,%3csvg%20width='38'%20height='38'%20viewBox='0%200%2038%2038'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_d_22_152)'%3e%3ccircle%20cx='19'%20cy='16'%20r='15'%20transform='rotate(-180%2019%2016)'%20fill='white'/%3e%3ccircle%20cx='19'%20cy='16'%20r='14.5'%20transform='rotate(-180%2019%2016)'%20stroke='%23005CFF'/%3e%3c/g%3e%3cpath%20d='M18.4665%2021L19.8946%2019.5814L16.7967%2016.4835L25%2016.4835L25%2014.4811L16.7967%2014.4811L19.8946%2011.3831L18.4665%209.9646L12.9614%2015.4823L18.4665%2021Z'%20fill='%23005CFF'/%3e%3cdefs%3e%3cfilter%20id='filter0_d_22_152'%20x='0'%20y='0'%20width='38'%20height='38'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='3'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_22_152'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_22_152'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="" />
+					</button>
+					<button
+						class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+						data-glide-dir=">"
+					>
+						<img src="data:image/svg+xml,%3csvg%20width='39'%20height='38'%20viewBox='0%200%2039%2038'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_d_22_151)'%3e%3ccircle%20cx='19.4004'%20cy='16'%20r='15'%20fill='white'/%3e%3ccircle%20cx='19.4004'%20cy='16'%20r='14.5'%20stroke='%23005CFF'/%3e%3c/g%3e%3cpath%20d='M19.9338%2011L18.5058%2012.4186L21.6037%2015.5165H13.4004V17.5189H21.6037L18.5058%2020.6169L19.9338%2022.0354L25.439%2016.5177L19.9338%2011Z'%20fill='%23005CFF'/%3e%3cdefs%3e%3cfilter%20id='filter0_d_22_151'%20x='0.400391'%20y='0'%20width='38'%20height='38'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='3'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_22_151'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_22_151'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="" />
+					</button>
+				</div>
+				<div
+					class="glide__bullets w-full flex justify-center gap-1 py-4"
+					data-glide-el="controls[nav]"
+				>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=0"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=5"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=10"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="px-4">
+			<div
+				class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+			>
+				<div class="w-full flex justify-between mb-3">
+					<p class="text-xl font-bold">Lançamentos</p>
+					<p class="text-sm">Ver mais</p>
+				</div>
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides" id="ul-shirt-2"></ul>
+				</div>
+				<div
+					class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+					data-glide-el="controls"
+				>
+					<button
+						class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+						data-glide-dir="<"
+					>
+						<img src="data:image/svg+xml,%3csvg%20width='38'%20height='38'%20viewBox='0%200%2038%2038'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_d_22_152)'%3e%3ccircle%20cx='19'%20cy='16'%20r='15'%20transform='rotate(-180%2019%2016)'%20fill='white'/%3e%3ccircle%20cx='19'%20cy='16'%20r='14.5'%20transform='rotate(-180%2019%2016)'%20stroke='%23005CFF'/%3e%3c/g%3e%3cpath%20d='M18.4665%2021L19.8946%2019.5814L16.7967%2016.4835L25%2016.4835L25%2014.4811L16.7967%2014.4811L19.8946%2011.3831L18.4665%209.9646L12.9614%2015.4823L18.4665%2021Z'%20fill='%23005CFF'/%3e%3cdefs%3e%3cfilter%20id='filter0_d_22_152'%20x='0'%20y='0'%20width='38'%20height='38'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='3'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_22_152'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_22_152'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="" />
+					</button>
+					<button
+						class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+						data-glide-dir=">"
+					>
+						<img src="data:image/svg+xml,%3csvg%20width='39'%20height='38'%20viewBox='0%200%2039%2038'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_d_22_151)'%3e%3ccircle%20cx='19.4004'%20cy='16'%20r='15'%20fill='white'/%3e%3ccircle%20cx='19.4004'%20cy='16'%20r='14.5'%20stroke='%23005CFF'/%3e%3c/g%3e%3cpath%20d='M19.9338%2011L18.5058%2012.4186L21.6037%2015.5165H13.4004V17.5189H21.6037L18.5058%2020.6169L19.9338%2022.0354L25.439%2016.5177L19.9338%2011Z'%20fill='%23005CFF'/%3e%3cdefs%3e%3cfilter%20id='filter0_d_22_151'%20x='0.400391'%20y='0'%20width='38'%20height='38'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='3'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_22_151'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_22_151'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="" />
+					</button>
+				</div>
+				<div
+					class="glide__bullets w-full flex justify-center gap-1 py-4"
+					data-glide-el="controls[nav]"
+				>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=0"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=5"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=10"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>
