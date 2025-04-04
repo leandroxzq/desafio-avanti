@@ -8,8 +8,6 @@ const menuContent = document.getElementById("menu-content")
 const departmentColumn = document.getElementById("department-column")
 const categoryColumn = document.getElementById("category-column")
 
-console.log(departmentColumn)
-
 menuButton.addEventListener("click", () => {
 	menuContent.classList.toggle("hidden")
 	menuContent.classList.toggle("flex")

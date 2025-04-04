@@ -12,6 +12,11 @@
 			type="text/css"
 			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+		/>
+
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Desenvolvimento de layout</title>
@@ -168,6 +173,126 @@
 			</article>
 		</div>
 
+		<section class="px-4">
+			<div
+				class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+			>
+				<div class="w-full flex justify-between mb-3">
+					<p class="text-xl font-bold">Lançamentos</p>
+					<p class="text-sm">Ver mais</p>
+				</div>
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides" id="ul-shirt-1"></ul>
+				</div>
+				<div
+					class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+					data-glide-el="controls"
+				>
+					<button
+						class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+						data-glide-dir="<"
+					>
+						<img src="src/assets/img/arrow-left.svg" alt="" />
+					</button>
+					<button
+						class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+						data-glide-dir=">"
+					>
+						<img src="src/assets/img/arrow-right.svg" alt="" />
+					</button>
+				</div>
+				<div
+					class="glide__bullets w-full flex justify-center gap-1 py-4"
+					data-glide-el="controls[nav]"
+				>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=0"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=5"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=10"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="px-4">
+			<div
+				class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+			>
+				<div class="w-full flex justify-between mb-3">
+					<p class="text-xl font-bold">Lançamentos</p>
+					<p class="text-sm">Ver mais</p>
+				</div>
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides" id="ul-shirt-2"></ul>
+				</div>
+				<div
+					class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+					data-glide-el="controls"
+				>
+					<button
+						class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+						data-glide-dir="<"
+					>
+						<img src="src/assets/img/arrow-left.svg" alt="" />
+					</button>
+					<button
+						class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+						data-glide-dir=">"
+					>
+						<img src="src/assets/img/arrow-right.svg" alt="" />
+					</button>
+				</div>
+				<div
+					class="glide__bullets w-full flex justify-center gap-1 py-4"
+					data-glide-el="controls[nav]"
+				>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=0"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=5"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+					<button
+						class="glide__bullet cursor-pointer"
+						data-glide-dir="=10"
+					>
+						<div
+							class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+						></div>
+					</button>
+				</div>
+			</div>
+		</section>
+
 		<script type="module" src="/src/main.js"></script>
+		<script type="module" src="/src/carousel.js"></script>
 	</body>
 </html>
