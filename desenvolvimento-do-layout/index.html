@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desenvolvimento de layout</title>
+	</head>
+	<body>
+		<div id="app">
+			<section
+				class="min-h-[3.25rem] flex items-center justify-center bg-[#005CFF] text-center sm:min-h-[1.875rem]"
+			>
+				<h2 class="text-white text-[0.875rem] font-bold px-5">
+					Ganhe
+					<strong class="bg-[#6220C1] rounded-[4px] px-[4px]">
+						R$10,00</strong
+					>
+					de desconte no seu primeiro pedido. Utilize o cupom
+					DESCONTO10
+				</h2>
+			</section>
+
+			<header class="w-full z-10 shadow-lg relative">
+				<div class="header-container max-w-[1280px] w-full">
+					<a class="logo">
+						<img
+							class=""
+							src="src/assets/img/avanti-logo.svg"
+							alt="Logo da Avanti"
+						/>
+					</a>
+					<form
+						class="search flex justify-center items-center rounded-[10px] max-h-[38px]"
+					>
+						<input
+							name="input"
+							class="flex items-center h-[2.5rem] px-4 border-none outline-none w-full"
+							type="text"
+							placeholder="Digite aqui o você procura"
+						/>
+						<i class="text-2xl px-3 ph ph-magnifying-glass"></i>
+					</form>
+					<div
+						class="cart flex items-center justify-center max-h-[28px] gap-2"
+					>
+						<img
+							src="src/assets/img/user.svg"
+							class="cursor-pointer hidden md:block"
+							alt=""
+						/>
+						<div class="font-semibold hidden md:block">
+							<p
+								class="text-[14px] text-w font-semibold leading-3"
+							>
+								Olá, <br />Nome Cliente!
+							</p>
+						</div>
+						<i
+							class="text-[1.563rem] md:text-2xl cursor-pointer font-bold ph ph-shopping-cart-simple text-black"
+						></i>
+					</div>
+					<nav
+						class="nav relative flex items-center justify-center max-h-[22px] text-[14px]"
+						id="department-row"
+					>
+						<button
+							class="menu-toggle cursor-pointer text-xl font-semibold flex items-center m-0 max-h-[22px] gap-0.5"
+						>
+							<i
+								class="ph ph-list text-[1.563rem] md:text-2xl"
+							></i>
+							<p class="hidden md:block text-[14px] font-bold">
+								Todas as Categorias
+							</p>
+						</button>
+					</nav>
+				</div>
+			</header>
+
+			<nav class="menu-container hidden" id="menu-content">
+				<div class="menu-column shadow p-4 overflow-auto bg-[#F5F5F5]">
+					<div
+						id="department-column"
+						class="flex flex-col gap-4"
+					></div>
+				</div>
+				<div
+					class="menu-row flex flex-wrap shadow overflow-auto bg-[#fff] xl:bg-wite"
+				>
+					<div
+						id="category-column"
+						class="flex flex-col gap-4 flex-wrap h-[329px] xl:min-w-[600px] pt-4 pl-4"
+					></div>
+					<div class="menu-img">
+						<h3 class="">
+							Confira os Produtos Que acabaram De chegar
+						</h3>
+						<button
+							class="bottom-3 left-3 text-white p-4 font-bold"
+						>
+							VER TODOS
+						</button>
+						<img
+							class="absolute"
+							src="src/assets/img/menu-logo-bg.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</nav>
+
+			<nav class="menu-container hidden" id="menu-content-row">
+				<div class="flex items-center shadow pl-4 bg-[#fff] h-[329px]">
+					<div class="flex-col min-h-[100%]">
+						<h2
+							class="dep-tile text-[16px] my-5 font-bold text-black"
+							id="dep-title"
+						></h2>
+						<div
+							class="flex flex-col flex-wrap gap-4 overflow-auto h-[270px] space-x-8"
+							id="category-row"
+						></div>
+					</div>
+					<div class="menu-img">
+						<h3 class="">
+							Confira os Produtos Que acabaram De chegar
+						</h3>
+						<button
+							class="bottom-3 left-3 text-white p-4 font-bold"
+						>
+							VER TODOS
+						</button>
+						<img
+							class="absolute"
+							src="src/assets/img/menu-logo-bg.svg"
+							alt=""
+						/>
+					</div>
+				</div>
+			</nav>
+
+			<article class="bg-[#E7E7EA] max-h-[510px]">
+				<div class="banner max-w-[1280px] mx-auto">
+					<img class="" src="./src/assets/img/banner_1.svg" alt="" />
+
+					<div class="banner-title">
+						<h2 class="strong font-bold">
+							<strong>SUPER</strong>
+							<p class="font-light">SALE</p>
+						</h2>
+						<p class="promotion text-[#005CFF] font-bold">
+							ITENS SELECIONADOS COM ATÉ
+						</p>
+						<p class="number text-[#005CFF] font-bold">50% OFF</p>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>

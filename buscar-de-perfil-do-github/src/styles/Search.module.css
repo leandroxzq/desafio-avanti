@@ -1,0 +1,63 @@
+.search-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 31.438rem;
+	height: 62px;
+	border: 1px solid #dddddd;
+	background: var(--white);
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+input {
+	flex: 1;
+	font-family: "Nunito Sans", sans-serif;
+	color: var(--black);
+	font-weight: 600;
+	font-size: 1.25rem;
+	border: none;
+	margin-left: 1rem;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 25%;
+	background: var(--blue-300);
+	color: white;
+	min-height: 62px;
+	height: 100%;
+	max-width: 62px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 1px solid #dddddd;
+	transition: background-color 0.3s ease;
+	transform: translateX(1px);
+}
+
+button:hover {
+	background: #1c7ed6;
+}
+
+@media (width <= 400px) {
+	.search-container {
+		min-width: 100%;
+		width: 100%;
+		max-width: 31.438rem;
+		transform: scale(1);
+	}
+
+	input {
+		width: 75%;
+	}
+}
