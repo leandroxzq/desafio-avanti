@@ -57,3 +57,9 @@
 		font-size: 2rem;
 	}
 }
+
+@media (max-width: 768px) {
+	.banner-2 {
+		width: 329px;
+	}
+}
