@@ -19,7 +19,7 @@ const createCarousel = (ulId) => {
 
 		const imgShirt = document.createElement("img")
 		imgShirt.src =
-			"https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/shirt.png"
+			"https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/shirt.svg"
 		imgShirt.classList.add("max-w-[220px]", "max-h-[220px]")
 
 		liShirt.innerHTML = `

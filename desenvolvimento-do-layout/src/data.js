@@ -296,5 +296,5 @@ export const shirt = {
 	oldValueShirt: "R$ 100,00",
 	newValueShirt: "R$79,90",
 	promotionShirt: "10% off",
-	amount: 5,
+	amount: 15,
 }
