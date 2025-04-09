@@ -293,6 +293,7 @@ export const departamentos = [
 
 export const shirt = {
 	titleShirt: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
+	img: "https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/shirt.svg",
 	oldValueShirt: "R$ 100,00",
 	newValueShirt: "R$79,90",
 	promotionShirt: "10% off",
