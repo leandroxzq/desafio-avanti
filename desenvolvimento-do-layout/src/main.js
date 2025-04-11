@@ -26,8 +26,6 @@ const find = (e) => {
 
 	const text = searchInput.value
 
-	console.log(text)
-
 	if (text) {
 		searchOut.innerText = `Você buscou por: ${text}`
 	} else {
@@ -162,5 +160,38 @@ const loadMenuRow = () => {
 		})
 	})
 }
+
+const closeMenusOnClickOutside = (e) => {
+	const menuContent = document.getElementById("menu-content")
+	const menuContentRow = document.getElementById("menu-content-row")
+	const menuButton = document.querySelector(".menu-toggle")
+	const departmentLinks = departmentRow.querySelectorAll("a")
+
+	const clickedOnDepartmentLink = Array.from(departmentLinks).some((link) =>
+		link.contains(e.target)
+	)
+
+	if (
+		!menuContent.contains(e.target) &&
+		!menuButton.contains(e.target) &&
+		!menuContentRow.contains(e.target) &&
+		!clickedOnDepartmentLink
+	) {
+		menuContent.classList.add("hidden")
+		menuContent.classList.remove("flex")
+		menuButton.classList.remove("active")
+		menuContentRow.classList.add("hidden")
+
+		departmentRow.querySelectorAll("a").forEach((item) => {
+			item.classList.remove("active")
+		})
+
+		departmentColumn.querySelectorAll("a").forEach((link) => {
+			link.classList.remove("active")
+		})
+	}
+}
+
+document.addEventListener("click", closeMenusOnClickOutside)
 
 document.addEventListener("DOMContentLoaded", loadMenuRow())
