@@ -61,6 +61,7 @@ searchX.addEventListener("click", (e) => {
 	searchNav.classList.add("hidden")
 	searchOut.innerText = ``
 	searchInput.value = ""
+	searchX.classList.add("hidden")
 })
 
 searchButton.addEventListener("click", (e) => {
