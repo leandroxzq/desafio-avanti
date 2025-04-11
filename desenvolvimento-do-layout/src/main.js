@@ -8,6 +8,65 @@ const menuContent = document.getElementById("menu-content")
 const departmentColumn = document.getElementById("department-column")
 const categoryColumn = document.getElementById("category-column")
 
+const searchInput = document.getElementById("search-input")
+const searchButton = document.getElementById("search-button")
+const searchOut = document.getElementById("search-output")
+const searchNav = document.getElementById("search-nav")
+const searchX = document.getElementById("search-button-x")
+
+const find = (e) => {
+	e.preventDefault()
+
+	if (searchInput.value === "") {
+		return
+	}
+
+	searchNav.classList.remove("hidden")
+	searchNav.classList.add("flex")
+
+	const text = searchInput.value
+
+	console.log(text)
+
+	if (text) {
+		searchOut.innerText = `Você buscou por: ${text}`
+	} else {
+		searchOut.innerText = ``
+	}
+}
+
+searchInput.addEventListener("input", () => {
+	searchNav.classList.remove("flex")
+	searchNav.classList.add("hidden")
+
+	if (searchInput.value !== "") {
+		searchX.classList.add("flex")
+		searchX.classList.remove("hidden")
+	} else {
+		searchX.classList.add("hidden")
+		searchX.classList.remove("flex")
+	}
+})
+
+searchInput.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		find(e)
+	}
+})
+
+searchX.addEventListener("click", (e) => {
+	e.preventDefault()
+
+	searchNav.classList.remove("flex")
+	searchNav.classList.add("hidden")
+	searchOut.innerText = ``
+	searchInput.value = ""
+})
+
+searchButton.addEventListener("click", (e) => {
+	find(e)
+})
+
 menuButton.addEventListener("click", () => {
 	menuContent.classList.toggle("hidden")
 	menuContent.classList.toggle("flex")

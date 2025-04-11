@@ -46,15 +46,33 @@
 						/>
 					</a>
 					<form
-						class="search flex justify-center items-center rounded-[10px] max-h-[38px]"
+						class="search relative flex justify-center items-center rounded-[10px] max-h-[38px] z-50"
 					>
 						<input
 							name="input"
 							class="flex items-center h-[2.5rem] px-4 border-none outline-none w-full"
 							type="text"
+							id="search-input"
 							placeholder="Digite aqui o você procura"
 						/>
-						<i class="text-2xl px-3 ph ph-magnifying-glass"></i>
+						<button
+							class="hidden items-center cursor-pointer hover:text-gray-500"
+							id="search-button-x"
+						>
+							<i class="ph ph-x"></i>
+						</button>
+						<button
+							class="flex items-center cursor-pointer hover:text-gray-500"
+							id="search-button"
+						>
+							<i class="text-2xl px-3 ph ph-magnifying-glass"></i>
+						</button>
+						<nav
+							class="bg-gray-50 hidden flex-col p-5 absolute w-full top-10 rounded-md z-10"
+							id="search-nav"
+						>
+							<p id="search-output"></p>
+						</nav>
 					</form>
 					<div
 						class="cart flex items-center justify-center max-h-[28px] gap-2"
@@ -155,381 +173,401 @@
 				</div>
 			</nav>
 
-			<article class="bg-[#E7E7EA] max-h-[510px]">
-				<div class="banner max-w-[1280px] mx-auto">
-					<img class="" src="./src/assets/img/banner_1.svg" alt="" />
-
-					<div class="banner-title">
-						<h2 class="strong font-bold">
-							<strong>SUPER</strong>
-							<p class="font-light">SALE</p>
-						</h2>
-						<p class="promotion text-[#005CFF] font-bold">
-							ITENS SELECIONADOS COM ATÉ
-						</p>
-						<p class="number text-[#005CFF] font-bold">50% OFF</p>
-					</div>
-				</div>
-			</article>
-
-			<section class="px-4">
-				<div
-					class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
-				>
-					<div class="w-full flex justify-between mb-3">
-						<p class="text-xl font-bold">Lançamentos</p>
-						<p class="text-sm">Ver mais</p>
-					</div>
-					<div class="glide__track" data-glide-el="track">
-						<ul class="glide__slides" id="ul-shirt-1"></ul>
-					</div>
-					<div
-						class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
-						data-glide-el="controls"
-					>
-						<button
-							class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
-							data-glide-dir="<"
-						>
-							<img src="src/assets/img/arrow-left.svg" alt="" />
-						</button>
-						<button
-							class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
-							data-glide-dir=">"
-						>
-							<img src="src/assets/img/arrow-right.svg" alt="" />
-						</button>
-					</div>
-					<div
-						class="glide__bullets w-full flex justify-center gap-1 py-4"
-						data-glide-el="controls[nav]"
-					>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=0"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=5"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=10"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-					</div>
-				</div>
-			</section>
-
-			<section
-				class="max-w-[1177px] min-h-[747px] flex mx-auto my-10 flex-col md:flex-row"
-			>
-				<div
-					class="bg-[url(https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/cup-bg.svg)] md:w-7/12 flex items-center justify-center"
-				>
-					<img src="src/assets/img/cup.svg" alt="" />
-				</div>
-				<div
-					class="md:w-5/12 flex flex-col justify-center px-6 pt-8 gap-6 leading-[140%] text-black"
-				>
-					<h3 class="text-2xl md:text-[1.875rem] font-bold">
-						Lorem Ipsum
-					</h3>
-					<p class="text-sm md:text-[1.125rem]">
-						Duis consectetur metus nec lacus auctor dignissim.
-						Mauris vitae finibus dui. Mauris laoreet lacus ut
-						eleifend viverra. Cras efficitur volutpat dui, in
-						lobortis metus lacinia sit amet. Sed lacinia pharetra
-						magna, vel pulvinar ligula hendrerit a. Maecenas
-						fringilla porttitor tortor eget lacinia. Donec
-						sollicitudin euismod orci, auctor fringilla magna
-						consequat interdum. Fusce sagittis elit a libero commodo
-						egestas efficitur id augue.
-					</p>
-					<p class="text-sm md:text-[1.125rem]">
-						Duis consectetur metus nec lacus auctor dignissim.
-						Mauris vitae finibus dui. Mauris laoreet lacus ut
-						eleifend viverra. Cras efficitur volutpat dui, in
-						lobortis metus lacinia sit amet. Sed lacinia pharetra
-						magna, vel pulvinar ligula hendrerit a. Maecenas
-						fringilla porttitor tortor eget lacinia. Donec
-						sollicitudin euismod orci, auctor fringilla magna
-						consequat interdum. Fusce sagittis elit a libero commodo
-						egestas efficitur id augue.
-					</p>
-				</div>
-			</section>
-
-			<article
-				class="bg-[#DEDEDE] w-full h-[819px] flex items-center justify-center p-6"
-			>
-				<div
-					class="flex flex-wrap h-full max-w-[1117px] items-center mx-auto gap-6 justify-center md:flex-nowrap"
-				>
-					<div
-						class="max-w-[476px] order-2 w-full gap-4 flex flex-col justify-between md:w-5/12 md:min-h-[576px]"
-					>
-						<h1
-							class="text-center font-bold text-3xl text-[#4f4f4f]"
-						>
-							Lorem
-						</h1>
-						<div class="flex items-center">
-							<div
-								class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
-							>
-								<img src="src/assets/img/map-pin.svg" alt="" />
-							</div>
-							<p class="text-[0.75rem] md:text-[1.125rem]">
-								Aenean massa. Cum sociis natoque penatibus et
-								magnis dis parturient montes, nascetur ridiculus
-								mus. Donec quam felis, ultricies nec,
-								pellentesque eu, pretium quis, sem.
-							</p>
-						</div>
-						<div class="flex items-center">
-							<div
-								class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
-							>
-								<img src="src/assets/img/map-pin.svg" alt="" />
-							</div>
-							<p class="text-[0.75rem] md:text-[1.125rem]">
-								Aenean massa. Cum sociis natoque penatibus et
-								magnis dis parturient montes, nascetur ridiculus
-								mus. Donec quam felis, ultricies nec,
-								pellentesque eu, pretium quis, sem.
-							</p>
-						</div>
-						<div class="flex items-center">
-							<div
-								class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
-							>
-								<img src="src/assets/img/map-pin.svg" alt="" />
-							</div>
-							<p class="text-[0.75rem] md:text-[1.125rem]">
-								Aenean massa. Cum sociis natoque penatibus et
-								magnis dis parturient montes, nascetur ridiculus
-								mus. Donec quam felis, ultricies nec,
-								pellentesque eu, pretium quis, sem.
-							</p>
-						</div>
-					</div>
-					<div
-						class="w-full md:w-7/12 md:order-2 order-1 flex justify-center"
-					>
+			<main>
+				<article class="bg-[#E7E7EA] max-h-[510px]">
+					<div class="banner max-w-[1280px] mx-auto">
 						<img
-							class="banner-2"
-							src="src/assets/img/banner_2.svg"
+							class=""
+							src="./src/assets/img/banner_1.svg"
 							alt=""
 						/>
-					</div>
-				</div>
-			</article>
-
-			<section
-				class="max-w-[1177px] min-h-[747px] flex mx-auto my-10 flex-col md:flex-row"
-			>
-				<div
-					class="bg-[url(https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/cup-bg.svg)] md:w-7/12 flex items-center justify-center"
-				>
-					<img src="src/assets/img/cup.svg" alt="" />
-				</div>
-				<div
-					class="md:w-5/12 flex flex-col justify-center px-6 pt-8 gap-6 leading-[140%] text-black"
-				>
-					<h3 class="text-2xl md:text-[1.875rem] font-bold">
-						Lorem Ipsum
-					</h3>
-					<p class="text-sm md:text-[1.125rem]">
-						Duis consectetur metus nec lacus auctor dignissim.
-						Mauris vitae finibus dui. Mauris laoreet lacus ut
-						eleifend viverra. Cras efficitur volutpat dui, in
-						lobortis metus lacinia sit amet. Sed lacinia pharetra
-						magna, vel pulvinar ligula hendrerit a. Maecenas
-						fringilla porttitor tortor eget lacinia. Donec
-						sollicitudin euismod orci, auctor fringilla magna
-						consequat interdum. Fusce sagittis elit a libero commodo
-						egestas efficitur id augue.
-					</p>
-					<p class="text-sm md:text-[1.125rem]">
-						Duis consectetur metus nec lacus auctor dignissim.
-						Mauris vitae finibus dui. Mauris laoreet lacus ut
-						eleifend viverra. Cras efficitur volutpat dui, in
-						lobortis metus lacinia sit amet. Sed lacinia pharetra
-						magna, vel pulvinar ligula hendrerit a. Maecenas
-						fringilla porttitor tortor eget lacinia. Donec
-						sollicitudin euismod orci, auctor fringilla magna
-						consequat interdum. Fusce sagittis elit a libero commodo
-						egestas efficitur id augue.
-					</p>
-				</div>
-			</section>
-
-			<section class="px-4">
-				<div
-					class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
-				>
-					<div class="w-full flex justify-between mb-3">
-						<p class="text-xl font-bold">Lançamentos</p>
-						<p class="text-sm">Ver mais</p>
-					</div>
-					<div class="glide__track" data-glide-el="track">
-						<ul class="glide__slides" id="ul-shirt-2"></ul>
-					</div>
-					<div
-						class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
-						data-glide-el="controls"
-					>
-						<button
-							class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
-							data-glide-dir="<"
-						>
-							<img src="src/assets/img/arrow-left.svg" alt="" />
-						</button>
-						<button
-							class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
-							data-glide-dir=">"
-						>
-							<img src="src/assets/img/arrow-right.svg" alt="" />
-						</button>
-					</div>
-					<div
-						class="glide__bullets w-full flex justify-center gap-1 py-4"
-						data-glide-el="controls[nav]"
-					>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=0"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=5"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-						<button
-							class="glide__bullet cursor-pointer"
-							data-glide-dir="=10"
-						>
-							<div
-								class="bg-[#838383] w-[7px] h-[7px] rounded-full"
-							></div>
-						</button>
-					</div>
-				</div>
-			</section>
-
-			<article
-				class="relative flex h-[449px] md:min-h-[660px] items-center"
-			>
-				<img
-					src="src/assets/img/contact.png"
-					class="hidden sm:block absolute h-full w-full object-fill"
-					alt=""
-				/>
-				<img
-					src="src/assets/img/contact-sm.png"
-					class="sm:hidden absolute h-full w-full object-fill"
-					alt=""
-				/>
-				<div
-					class="absolute w-full min-h-[75px] md:min-h-[132px] bg-[#005CFF] flex items-center justify-center"
-				>
-					<p
-						class="p-4 text-white text-[1rem] md:text-[2rem] text-center md:text-[rem]"
-					>
-						Entre em contato conosco e verifique a disponibilidade
-						para sua região!
-					</p>
-				</div>
-			</article>
-
-			<section
-				class="max-w-[600px] lg:max-w-[1260px] mx-auto flex flex-col gap-3 px-4 py-10"
-			>
-				<h3 class="font-bold text-xl text-center">
-					Cadastre-se na nossa
-					<span class="text-[#005CFF]">newsletter</span>
-				</h3>
-				<form
-					class="bg-[#DEDEDE] w-full min-h-[176px] flex justify-center items-center rounded-[8px]"
-				>
-					<div
-						class="flex flex-col w-full px-4 py-8 items-center gap-6 lg:flex-row lg:w-auto"
-					>
-						<input
-							class="bg-white py-4 px-6 rounded-[8px] focus:outline-none lg:w-[280px] w-full"
-							type="text"
-							placeholder="Digite seu nome"
-						/>
-						<input
-							class="bg-white py-4 px-6 rounded-[8px] focus:outline-none lg:w-[280px] w-full"
-							type="text"
-							placeholder="Digite seu e-mail"
-						/>
-						<div class="inline-flex items-center lg:w-[280px]">
-							<label
-								class="relative flex cursor-pointer items-center rounded-full p-3"
-								for="login"
-								data-ripple-dark="true"
-							>
-								<input
-									id="login"
-									type="checkbox"
-									class="before:content[''] peer relative bg-white h-5 w-5 cursor-pointer appearance-none rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-pink-500 checked:bg-pink-500 checked:before:bg-pink-500 hover:before:opacity-10"
-								/>
-								<div
-									class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-3.5 w-3.5"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										stroke="currentColor"
-										stroke-width="1"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-											clip-rule="evenodd"
-										></path>
-									</svg>
-								</div>
-							</label>
-							<label
-								class="mt-px text-[0.75rem] cursor-pointer select-none font-light text-gray-700"
-								for="login"
-							>
-								Estou de acordo a Politícia de Privacidade
-							</label>
+						<div class="banner-title">
+							<h2 class="strong font-bold">
+								<strong>SUPER</strong>
+								<p class="font-light">SALE</p>
+							</h2>
+							<p class="promotion text-[#005CFF] font-bold">
+								ITENS SELECIONADOS COM ATÉ
+							</p>
+							<p class="number text-[#005CFF] font-bold">
+								50% OFF
+							</p>
 						</div>
-
-						<button
-							class="text-base bg-[#005CFF] text-white py-[0.875rem] px-6 rounded-[8px] font-bold w-full lg:max-w-[121px]"
-						>
-							Cadastrar
-						</button>
 					</div>
-				</form>
-			</section>
+				</article>
+				<section class="px-4">
+					<div
+						class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+					>
+						<div class="w-full flex justify-between mb-3">
+							<p class="text-xl font-bold">Lançamentos</p>
+							<p class="text-sm hover:cursor-pointer">Ver mais</p>
+						</div>
+						<div class="glide__track" data-glide-el="track">
+							<ul class="glide__slides" id="ul-shirt-1"></ul>
+						</div>
+						<div
+							class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+							data-glide-el="controls"
+						>
+							<button
+								class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+								data-glide-dir="<"
+							>
+								<img
+									src="src/assets/img/arrow-left.svg"
+									alt=""
+								/>
+							</button>
+							<button
+								class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+								data-glide-dir=">"
+							>
+								<img
+									src="src/assets/img/arrow-right.svg"
+									alt=""
+								/>
+							</button>
+						</div>
+						<div
+							class="glide__bullets w-full flex justify-center gap-1 py-4"
+							data-glide-el="controls[nav]"
+						>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=0"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=5"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=10"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section
+					class="max-w-[1177px] min-h-[747px] flex mx-auto my-10 flex-col md:flex-row"
+				>
+					<div
+						class="bg-[url(https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/cup-bg.svg)] md:w-7/12 flex items-center justify-center"
+					>
+						<img src="src/assets/img/cup.svg" alt="" />
+					</div>
+					<div
+						class="md:w-5/12 flex flex-col justify-center px-6 pt-8 gap-6 leading-[140%] text-black"
+					>
+						<h3 class="text-2xl md:text-[1.875rem] font-bold">
+							Lorem Ipsum
+						</h3>
+						<p class="text-sm md:text-[1.125rem]">
+							Duis consectetur metus nec lacus auctor dignissim.
+							Mauris vitae finibus dui. Mauris laoreet lacus ut
+							eleifend viverra. Cras efficitur volutpat dui, in
+							lobortis metus lacinia sit amet. Sed lacinia
+							pharetra magna, vel pulvinar ligula hendrerit a.
+							Maecenas fringilla porttitor tortor eget lacinia.
+							Donec sollicitudin euismod orci, auctor fringilla
+							magna consequat interdum. Fusce sagittis elit a
+							libero commodo egestas efficitur id augue.
+						</p>
+						<p class="text-sm md:text-[1.125rem]">
+							Duis consectetur metus nec lacus auctor dignissim.
+							Mauris vitae finibus dui. Mauris laoreet lacus ut
+							eleifend viverra. Cras efficitur volutpat dui, in
+							lobortis metus lacinia sit amet. Sed lacinia
+							pharetra magna, vel pulvinar ligula hendrerit a.
+							Maecenas fringilla porttitor tortor eget lacinia.
+							Donec sollicitudin euismod orci, auctor fringilla
+							magna consequat interdum. Fusce sagittis elit a
+							libero commodo egestas efficitur id augue.
+						</p>
+					</div>
+				</section>
+				<article
+					class="bg-[#DEDEDE] w-full h-[819px] flex items-center justify-center p-6"
+				>
+					<div
+						class="flex flex-wrap h-full max-w-[1117px] items-center mx-auto gap-6 justify-center md:flex-nowrap"
+					>
+						<div
+							class="max-w-[476px] order-2 w-full gap-4 flex flex-col justify-between md:w-5/12 md:min-h-[576px]"
+						>
+							<h1
+								class="text-center font-bold text-3xl text-[#4f4f4f]"
+							>
+								Lorem
+							</h1>
+							<div class="flex items-center">
+								<div
+									class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
+								>
+									<img
+										src="src/assets/img/map-pin.svg"
+										alt=""
+									/>
+								</div>
+								<p class="text-[0.75rem] md:text-[1.125rem]">
+									Aenean massa. Cum sociis natoque penatibus
+									et magnis dis parturient montes, nascetur
+									ridiculus mus. Donec quam felis, ultricies
+									nec, pellentesque eu, pretium quis, sem.
+								</p>
+							</div>
+							<div class="flex items-center">
+								<div
+									class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
+								>
+									<img
+										src="src/assets/img/map-pin.svg"
+										alt=""
+									/>
+								</div>
+								<p class="text-[0.75rem] md:text-[1.125rem]">
+									Aenean massa. Cum sociis natoque penatibus
+									et magnis dis parturient montes, nascetur
+									ridiculus mus. Donec quam felis, ultricies
+									nec, pellentesque eu, pretium quis, sem.
+								</p>
+							</div>
+							<div class="flex items-center">
+								<div
+									class="bg-[#005CFF] min-h-[60px] min-w-[60px] md:min-h-[90px] md:min-w-[90px] flex items-center justify-center rounded-[50%] mr-4"
+								>
+									<img
+										src="src/assets/img/map-pin.svg"
+										alt=""
+									/>
+								</div>
+								<p class="text-[0.75rem] md:text-[1.125rem]">
+									Aenean massa. Cum sociis natoque penatibus
+									et magnis dis parturient montes, nascetur
+									ridiculus mus. Donec quam felis, ultricies
+									nec, pellentesque eu, pretium quis, sem.
+								</p>
+							</div>
+						</div>
+						<div
+							class="w-full md:w-7/12 md:order-2 order-1 flex justify-center"
+						>
+							<img
+								class="banner-2"
+								src="src/assets/img/banner_2.svg"
+								alt=""
+							/>
+						</div>
+					</div>
+				</article>
+				<section
+					class="max-w-[1177px] min-h-[747px] flex mx-auto my-10 flex-col md:flex-row"
+				>
+					<div
+						class="bg-[url(https://raw.githubusercontent.com/leandroxzq/desafio-avanti/main/desenvolvimento-do-layout/src/assets/img/cup-bg.svg)] md:w-7/12 flex items-center justify-center"
+					>
+						<img src="src/assets/img/cup.svg" alt="" />
+					</div>
+					<div
+						class="md:w-5/12 flex flex-col justify-center px-6 pt-8 gap-6 leading-[140%] text-black"
+					>
+						<h3 class="text-2xl md:text-[1.875rem] font-bold">
+							Lorem Ipsum
+						</h3>
+						<p class="text-sm md:text-[1.125rem]">
+							Duis consectetur metus nec lacus auctor dignissim.
+							Mauris vitae finibus dui. Mauris laoreet lacus ut
+							eleifend viverra. Cras efficitur volutpat dui, in
+							lobortis metus lacinia sit amet. Sed lacinia
+							pharetra magna, vel pulvinar ligula hendrerit a.
+							Maecenas fringilla porttitor tortor eget lacinia.
+							Donec sollicitudin euismod orci, auctor fringilla
+							magna consequat interdum. Fusce sagittis elit a
+							libero commodo egestas efficitur id augue.
+						</p>
+						<p class="text-sm md:text-[1.125rem]">
+							Duis consectetur metus nec lacus auctor dignissim.
+							Mauris vitae finibus dui. Mauris laoreet lacus ut
+							eleifend viverra. Cras efficitur volutpat dui, in
+							lobortis metus lacinia sit amet. Sed lacinia
+							pharetra magna, vel pulvinar ligula hendrerit a.
+							Maecenas fringilla porttitor tortor eget lacinia.
+							Donec sollicitudin euismod orci, auctor fringilla
+							magna consequat interdum. Fusce sagittis elit a
+							libero commodo egestas efficitur id augue.
+						</p>
+					</div>
+				</section>
+				<section class="px-4">
+					<div
+						class="glide flex flex-col max-w-[1280px] mx-auto relative my-20"
+					>
+						<div class="w-full flex justify-between mb-3">
+							<p class="text-xl font-bold">Lançamentos</p>
+							<p class="text-sm hover:cursor-pointer">Ver mais</p>
+						</div>
+						<div class="glide__track" data-glide-el="track">
+							<ul class="glide__slides" id="ul-shirt-2"></ul>
+						</div>
+						<div
+							class="glide__arrows w-full items-center justify-between absolute top-5/12 hidden md:flex"
+							data-glide-el="controls"
+						>
+							<button
+								class="glide__arrow glide__arrow--left -translate-x-1/2 cursor-pointer"
+								data-glide-dir="<"
+							>
+								<img
+									src="src/assets/img/arrow-left.svg"
+									alt=""
+								/>
+							</button>
+							<button
+								class="glide__arrow glide__arrow--right translate-x-1/2 cursor-pointer"
+								data-glide-dir=">"
+							>
+								<img
+									src="src/assets/img/arrow-right.svg"
+									alt=""
+								/>
+							</button>
+						</div>
+						<div
+							class="glide__bullets w-full flex justify-center gap-1 py-4"
+							data-glide-el="controls[nav]"
+						>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=0"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=5"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+							<button
+								class="glide__bullet cursor-pointer"
+								data-glide-dir="=10"
+							>
+								<div
+									class="bg-[#838383] w-[7px] h-[7px] rounded-full"
+								></div>
+							</button>
+						</div>
+					</div>
+				</section>
+				<article
+					class="relative flex h-[449px] md:min-h-[660px] items-center"
+				>
+					<img
+						src="src/assets/img/contact.png"
+						class="hidden sm:block absolute h-full w-full object-fill"
+						alt=""
+					/>
+					<img
+						src="src/assets/img/contact-sm.png"
+						class="sm:hidden absolute h-full w-full object-fill"
+						alt=""
+					/>
+					<div
+						class="absolute w-full min-h-[75px] md:min-h-[132px] bg-[#005CFF] flex items-center justify-center"
+					>
+						<p
+							class="p-4 text-white text-[1rem] md:text-[2rem] text-center md:text-[rem]"
+						>
+							Entre em contato conosco e verifique a
+							disponibilidade para sua região!
+						</p>
+					</div>
+				</article>
+				<section
+					class="max-w-[600px] lg:max-w-[1260px] mx-auto flex flex-col gap-3 px-4 py-10"
+				>
+					<h3 class="font-bold text-xl text-center">
+						Cadastre-se na nossa
+						<span class="text-[#005CFF]">newsletter</span>
+					</h3>
+					<form
+						class="bg-[#DEDEDE] w-full min-h-[176px] flex justify-center items-center rounded-[8px]"
+					>
+						<div
+							class="flex flex-col w-full px-4 py-8 items-center gap-6 lg:flex-row lg:w-auto"
+						>
+							<input
+								class="bg-white py-4 px-6 rounded-[8px] focus:outline-none lg:w-[280px] w-full"
+								type="text"
+								placeholder="Digite seu nome"
+							/>
+							<input
+								class="bg-white py-4 px-6 rounded-[8px] focus:outline-none lg:w-[280px] w-full"
+								type="text"
+								placeholder="Digite seu e-mail"
+							/>
+							<div class="inline-flex items-center lg:w-[280px]">
+								<label
+									class="relative flex cursor-pointer items-center rounded-full p-3"
+									for="login"
+									data-ripple-dark="true"
+								>
+									<input
+										id="login"
+										type="checkbox"
+										class="before:content[''] peer relative bg-white h-5 w-5 cursor-pointer appearance-none rounded-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-pink-500 checked:bg-pink-500 checked:before:bg-pink-500 hover:before:opacity-10"
+									/>
+									<div
+										class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-3.5 w-3.5"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+											stroke="currentColor"
+											stroke-width="1"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+												clip-rule="evenodd"
+											></path>
+										</svg>
+									</div>
+								</label>
+								<label
+									class="mt-px text-[0.75rem] cursor-pointer select-none font-light text-gray-700"
+									for="login"
+								>
+									Estou de acordo a Politícia de Privacidade
+								</label>
+							</div>
+							<button
+								class="text-base bg-[#005CFF] hover:cursor-pointer text-white py-[0.875rem] px-6 rounded-[8px] font-bold w-full lg:max-w-[121px]"
+							>
+								Cadastrar
+							</button>
+						</div>
+					</form>
+				</section>
+			</main>
 
 			<footer
 				class="hidden xl:flex bg-[#F5F5F5] flex-col gap-16 items-center pt-12"
