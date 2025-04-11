@@ -6,7 +6,7 @@ Repositório com a solução para o Desafio Avanti. Foram desenvolvidos dois pro
 
 ### `🔍 Buscar Perfil do GitHub`
 
-[Buscar Perfil do GitHub](https://leandroxzq.github.io/desafio-avanti/buscar-de-perfil-do-github/)
+[Busca Perfil do GitHub](https://leandroxzq.github.io/desafio-avanti/busca-de-perfil-do-github/)
 
 ### `🎨 Desenvolvimento do Layout`
 

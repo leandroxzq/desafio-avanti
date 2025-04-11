@@ -22,9 +22,9 @@ jobs:
                   npm install
                   npm run build
 
-            - name: Install and build buscar-de-perfil-do-github
+            - name: Install and build busca-de-perfil-do-github
               run: |
-                  cd buscar-de-perfil-do-github
+                  cd busca-de-perfil-do-github
                   npm install
                   npm run build
 
@@ -39,5 +39,5 @@ jobs:
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GH_TOKEN }}
-                  publish_dir: buscar-de-perfil-do-github/dist
-                  destination_dir: buscar-de-perfil-do-github
+                  publish_dir: busca-de-perfil-do-github/dist
+                  destination_dir: busca-de-perfil-do-github
