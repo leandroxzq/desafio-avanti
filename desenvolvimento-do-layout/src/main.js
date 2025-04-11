@@ -97,6 +97,8 @@ const loadMenu = () => {
 		departmentColumn.appendChild(depLink)
 
 		depLink.addEventListener("click", (e) => {
+			e.preventDefault()
+
 			departmentColumn.querySelectorAll("a").forEach((link) => {
 				link.classList.remove("active")
 			})
@@ -129,6 +131,8 @@ const loadMenuRow = () => {
 		departmentRow.appendChild(depLink)
 
 		depLink.addEventListener("click", (e) => {
+			e.preventDefault()
+
 			menuContent.classList.add("hidden")
 			menuContent.classList.remove("flex")
 			menuButton.classList.remove("active")
