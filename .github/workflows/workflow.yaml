@@ -41,3 +41,10 @@ jobs:
                   github_token: ${{ secrets.GH_TOKEN }}
                   publish_dir: busca-de-perfil-do-github/dist
                   destination_dir: busca-de-perfil-do-github
+
+            - name: Deploy root index.html
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GH_TOKEN }}
+                  publish_dir: .
+                  destination_dir: desafio-avanti
