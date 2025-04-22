@@ -91,9 +91,9 @@ const loadMenu = () => {
 	departamentos.forEach((dep) => {
 		const depLink = document.createElement("a")
 		depLink.href = "#"
-		depLink.innerHTML = `${dep.departamento} <i class="ph ph-caret-right"></i>`
+		depLink.innerHTML = `${dep.departamento} <i class="ph ph-caret-right text-base"></i>`
 		depLink.className =
-			"flex justify-between items-center hover:text-blue-600 hover:font-bold"
+			"flex justify-between items-center hover:text-blue-600 hover:font-bold text-sm"
 		departmentColumn.appendChild(depLink)
 
 		depLink.addEventListener("click", (e) => {
